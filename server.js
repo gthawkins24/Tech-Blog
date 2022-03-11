@@ -9,10 +9,6 @@ const PORT = process.env.PORT || 3001;
 const sequelize = require("./config/connection");
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-// routes variables
-const routes = require('./routes/homepage-routes');
-const apiRoutes = require('./routes/api-routes');
-
 const sess = {
   secret: 'Super secret secret',
   cookie: {},
@@ -36,9 +32,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// routes variables
+const routes = require('./routes/homepage-routes');
+const apiRoutes = require('./routes/api-routes');
+
+// routes enabled
 app.use(routes);
 app.use(apiRoutes);
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Now listening on PORT: ${PORT}`));
 });
