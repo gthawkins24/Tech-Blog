@@ -1,4 +1,3 @@
-const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
 
 exports.getAllUsers = (req, res) => {
@@ -14,10 +13,10 @@ exports.getAllUsers = (req, res) => {
 
 exports.getOneUser = (req, res) => {
   User.findOne({
-    attributes: { exclude: ['password'] },
     where: {
       id: req.params.id
     },
+    attributes: { exclude: ['password'] },
     include: [
       {
         model: Post,

@@ -33,11 +33,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // routes variables
-const routes = require('./routes/homepage-routes');
+const homepageRoutes = require('./routes/homepage-routes');
 const apiRoutes = require('./routes/api-routes');
 
 // routes enabled
-app.use(routes);
+app.use(homepageRoutes);
 app.use(apiRoutes);
 
 sequelize.sync({ force: false }).then(() => {
