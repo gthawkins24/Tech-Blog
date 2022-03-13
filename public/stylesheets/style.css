@@ -1,18 +1,18 @@
 body {
-  background-color: rgb(168, 207, 191);
+  margin: 0;
+  padding: 0;
 }
-
-
 
 #single-post {
   border-style: solid;
-  margin: 3rem;
+  margin: 1rem;
 }
 
 #single-post a {
   text-decoration: none;
   color: lightgray;
   padding: 1rem;
+  font-size: 1.1rem;
 }
 
 #post-content {
@@ -31,9 +31,40 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   margin: 0;
-  background-color: rgb(39, 19, 15);
+  background-color: rgb(20, 10, 8);
 }
 
 .post-list {
   list-style: none;
+}
+
+header {
+  background-color: rgb(20, 10, 8);
+  margin: 0;
+}
+
+.wrapper {
+  background-color: rgb(192, 218, 188);
+}
+
+nav {
+  padding: 1rem;
+}
+
+nav a {
+  padding-right: 3rem;
+  text-decoration: none;
+  color: lightgray;
+  font-size: 2rem;
+}
+
+nav h1 {
+  background-color:rgb(192, 218, 188);
+  padding: .5rem;
+  font-size: 3rem;
+  display: table;
+  border-bottom-style: outset;
+  border-right-style: outset;
+  border-width: .5rem;
+  border-radius: 5px;
 }
