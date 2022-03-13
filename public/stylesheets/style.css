@@ -1,0 +1,39 @@
+body {
+  background-color: rgb(168, 207, 191);
+}
+
+
+
+#single-post {
+  border-style: solid;
+  margin: 3rem;
+}
+
+#single-post a {
+  text-decoration: none;
+  color: lightgray;
+  padding: 1rem;
+}
+
+#post-content {
+  padding: 1rem;
+  color: black;
+}
+
+#post-username {
+  color: lightgray;
+  padding-right: 1rem;
+}
+
+.post-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0;
+  background-color: rgb(39, 19, 15);
+}
+
+.post-list {
+  list-style: none;
+}

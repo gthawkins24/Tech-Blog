@@ -1,9 +1,9 @@
-<article class="post">
-  <div class="title">
+<article id="single-post" class="post">
+  <div class="post-head">
     <a href="{{post_url}}" target="_blank">{{title}}</a>
+    <p id="post-username">Posted by: {{user.username}} on {{format_date created_at}}</p>
   </div>
-  <div class="meta">
-    |
-    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+  <div>
+    <p id="post-content">{{post_content}}</p>
   </div>
 </article>
