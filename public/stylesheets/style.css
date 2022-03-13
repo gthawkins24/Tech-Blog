@@ -12,7 +12,8 @@ body {
   text-decoration: none;
   color: lightgray;
   padding: 1rem;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
 }
 
 #post-content {
@@ -23,6 +24,31 @@ body {
 #post-username {
   color: lightgray;
   padding-right: 1rem;
+}
+
+#single-comment {
+  border-style: solid;
+  margin: 1rem;
+}
+
+.comment-head p {
+  color: lightgray;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+.comment-text {
+  padding: 1rem;
+  color: black;
+}
+
+.comment-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0;
+  background-color: rgb(20, 10, 8);
 }
 
 .post-head {
@@ -67,4 +93,26 @@ nav h1 {
   border-right-style: outset;
   border-width: .5rem;
   border-radius: 5px;
+}
+
+#comment-heading {
+  margin-left: 1rem;
+}
+
+#comment-username {
+  font-size: 1.4rem;
+}
+
+#login-form {
+  border-style: solid;
+  margin: 1rem;
+}
+
+#login-form h1 {
+  margin: 0;
+  background-color: rgb(20, 10, 8);
+  color: lightgray;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
 }
