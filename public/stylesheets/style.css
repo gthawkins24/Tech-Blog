@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: rgb(192, 218, 188);
 }
 
 #single-post {
@@ -106,6 +107,14 @@ nav h1 {
 #login-form {
   border-style: solid;
   margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#login-form input {
+  padding: 1rem;
+  margin: 1rem;
 }
 
 #login-form h1 {
@@ -116,3 +125,54 @@ nav h1 {
   font-size: 1.5rem;
   font-weight: bolder;
 }
+
+#signup-form {
+  border-style: solid;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#signup-form input {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+#signup-form h1 {
+  margin: 0;
+  background-color: rgb(20, 10, 8);
+  color: lightgray;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+#login-button {
+  margin: 1rem auto;
+  width: 50%;
+  position: relative;
+}
+
+#login-button button {
+  color: white;
+  background-color: rgb(88, 88, 88);
+  cursor: pointer;
+  padding: 1rem, 0;
+  width: 100%;
+}
+
+#signup-button {
+  margin: 1rem auto;
+  width: 50%;
+  position: relative;
+}
+
+#signup-button button {
+  color: white;
+  background-color: rgb(88, 88, 88);
+  cursor: pointer;
+  padding: 1rem, 0;
+  width: 100%;
+}
+

@@ -82,3 +82,7 @@ exports.viewSinglePost = (req, res) => {
 exports.login = (req, res) => {
   res.render('login');
 };
+
+exports.displayDashboard = (req, res) => {
+  res.render('dashboard');
+}

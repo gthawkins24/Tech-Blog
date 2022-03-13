@@ -6,6 +6,7 @@ const postAPI = require('../controllers/api/post.js');
 // user routes
 router.get('/api/users', userAPI.getAllUsers);
 router.post('/api/users', userAPI.createNewUser);
+router.post('/api/users/login', userAPI.userLogin);
 router.get('/api/users/:id', userAPI.getOneUser);
 
 // post routes
