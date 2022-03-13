@@ -80,9 +80,28 @@ exports.viewSinglePost = (req, res) => {
 }
 
 exports.login = (req, res) => {
-  res.render('login');
+  res.render('login', {
+    loggedIn: req.session.loggedIn
+  });
 };
 
+exports.signup = (req, res) => {
+  res.render('signup');
+};
+
+exports.logout = (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  }
+  else {
+    res.status(404).end();
+  }
+}
+
 exports.displayDashboard = (req, res) => {
-  res.render('dashboard');
+  res.render('dashboard', {
+    loggedIn: req.session.loggedIn
+  });
 }

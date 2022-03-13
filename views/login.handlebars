@@ -1,32 +1,14 @@
-  {{#if loggedIn}}
-  <form id="signup-form">
-      <h1>You are already logged in. Create another account:</h1>
-      <h2>Username</h2>
-        <label id="username-signup"for="username-signup"></label>
-        <input type="text" id="username-signup" />
-      <h2>Password</h2>
-        <label id="password-signup"for="password-signup"></label>
-        <input type="password" id="password-signup" />
-    <div id="login-button">
-      <button type="submit">Signup</button>
-    </div>
-  </form>
-  <script src="/javascript/signup.js"></script>
-
-  {{else}}
-
-  {{/if}}
     <form id="login-form">
     <h1>Login</h1>
     <h2>Username</h2>
-      <label id="username-login"for="username-login"></label>
+      <label for="username-login"></label>
       <input type="text" id="username-login" />
     <h2>Password</h2>
-      <label id="password-login"for="password-login"></label>
+      <label for="password-login"></label>
       <input type="password" id="password-login" />
     <div id="login-button">
       <button type="submit">Login</button>
     </div>
-    <button id="create-new-account">Create a New Account Instead</button>
+    <a href="/signup" id="signup-link">Signup Instead</a>
   </form>
   <script src="/javascript/login.js"></script>
