@@ -1,0 +1,13 @@
+<article id="single-post" class="post">
+  <div class="post-head">
+    <input id="title" value="{{post.title}}">
+    <p id="post-username">Posted by: {{post.user.username}} on {{format_date post.created_at}}</p>
+  </div>
+  <div>
+    <input id="post-content-edit"value="{{post.post_content}}">
+    <input id="postID"type="hidden" value="post.id"> 
+  </div>
+</article>
+
+<a href="/dashboard/create-post" id="edit-post-button">Submit Edits</a>
+<a href="/dashboard" id="delete-post-button">Delete Post</a>
