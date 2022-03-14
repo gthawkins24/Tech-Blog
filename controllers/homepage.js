@@ -181,3 +181,7 @@ exports.dashboardEditPost = (req, res) => {
     res.status(500).json(err);
   });
 }
+
+exports.createPost = (req, res) => {
+  res.render('create-post');
+};

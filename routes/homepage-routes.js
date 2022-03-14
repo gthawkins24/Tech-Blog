@@ -9,5 +9,6 @@ router.get('/signup', homepageController.signup);
 router.get('/post/:id', homepageController.viewSinglePost);
 router.get('/dashboard', withAuth, homepageController.displayDashboard);
 router.get('/dashboard/edit/post/:id', withAuth, homepageController.dashboardEditPost);
+router.get('/dashboard/create-post', withAuth, homepageController.createPost);
 
 module.exports = router;

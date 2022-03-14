@@ -1,15 +1,23 @@
 {{> post-info post}}
 
 {{#if loggedIn}}
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
 
-  <div>
-    <button type="submit">add comment</button>
-    <button type="button" class="upvote-btn">upvote</button>
+<form id="comment-form">
+<article id="single-post" class="post">
+  <div class="post-head">
+    <a id="title">Add Comment:</a>
+    <p id="post-comment">Posted by: {{post.user.username}} on {{format_date post.created_at}}</p>
   </div>
+  <div>
+    <input id="post-content-edit"placeholder="Comment">
+    <input id="postID" type="hidden" value="{{post.id}}"> 
+  </div>
+</article>
+</form>
+
+<a href="/post/{{post.id}}" id="edit-post-button">Add Comment</a>
+
+<script src="/javascript/add-comment.js"></script>
 </form>
 {{/if}}
 

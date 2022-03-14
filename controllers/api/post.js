@@ -79,7 +79,7 @@ exports.createPost = (req, res) => {
   Post.create({
     title: req.body.title,
     post_content: req.body.post_content,
-    user_id: req.body.user_id
+    user_id: req.session.user_id
   })
   .then(dbPostData => res.json(dbPostData))
   .catch(err => {
@@ -87,3 +87,41 @@ exports.createPost = (req, res) => {
     res.status(500).json(err);
   });
 };
+
+exports.editPost = (req, res) => {
+  Post.update(req.body, {
+    where: {
+      id: req.params.id
+    }
+  })
+  .then(dbPostData => {
+    if (!dbPostData) {
+      res.status(404).json({ message: "No post found with this id" });
+      return;
+    }
+    res.json(dbPostData);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+};
+
+exports.deletePost = (req, res) => {
+  Post.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+  .then(dbPostData => {
+    if (!dbPostData) {
+      res.status(404).json({ message: 'No Post Found with this id!' });
+      return;
+    }
+    res.json(dbPostData);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  })
+}

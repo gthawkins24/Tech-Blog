@@ -1,7 +1,14 @@
 const { User, Post, Comment } = require('../../models');
 
-exports.getAllComments = (req, res) => {
-  Comment.findAll({
-    
+exports.createComment = (req, res) => {
+  Comment.create({
+    user_id: req.session.user_id,
+    comment_text: req.body.comment_text,
+    post_id: req.body.post_id
   })
-}
+  .then(dbCommentData => res.json(dbCommentData))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+};
