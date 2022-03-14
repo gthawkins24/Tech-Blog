@@ -1,1 +1,11 @@
-<h1>You're at the dashboard!</h1>
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+    {{#each posts as |post|}}
+      {{> dashboard-post-view post}}
+    {{/each}}
+</section>
+{{/if}}
+
+  <a href="/dashboard/create-post" id="create-post-button">Create Post +</a>
+
